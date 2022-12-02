@@ -36,22 +36,22 @@ h1 {
 #burger {
   padding-left: 1rem;
 }
-#burger ul {
+#burger .navUl {
   position: absolute;
-  top: 4rem;
-  left: -105%;
+  /* top: 4rem;
+  left: -105%; */
   font-size: 1.2rem;
   list-style: none;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  transition: all 0.4s;
+  /* overflow: hidden;
+  transition: all 0.4s; */
 }
 /* *******************
 HEADER menu mobile
 ***********************/
 #box {
-  
+  display: none;
 }
 #boxk:checked ~ .navUl {
   left: 0%;
@@ -145,17 +145,17 @@ RESPONSIVE DESKTOP
   /* 
 RESPONSIVE HEADER
 */
-
   #burger i {
     display: none;
   }
   #burger .navUl {
-    display: flex;
+    flex-direction: row;
     list-style: none;
-    width: 60%;
+    width: 40%;
+    /* left: 0; */
   }
   #burger .navUl li {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
   .relAb {
     flex-direction: row-reverse;
