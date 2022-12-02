@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "leage";
+    src: url(../font/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: leage;
+    
+}
+body{
+    background-color: rgb(150, 215, 228);
+}
