@@ -15,9 +15,10 @@ img {
 body {
   background-color: rgb(150, 215, 228);
 }
-/* 
-HEADER
-*/
+/* *******************
+HEADER navHeader
+***********************/
+
 #navHeader {
   position: relative;
   background-color: rgba(255, 255, 255, 0);
@@ -28,15 +29,40 @@ HEADER
   width: 100%;
   padding-top: 2rem;
   display: flex;
+  align-items: center;
 }
 h1 {
   width: 100%;
   font-size: 3rem;
   text-align: center;
 }
-#burger ul {
-  display: none;
+#burger {
+  padding-left: 1rem;
 }
+#burger ul {
+  position: absolute;
+  top: 4rem;
+  left: -105%;
+  font-size: 1.2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+/* *******************
+HEADER menu mobile
+***********************/
+#box {
+  
+}
+#boxk:checked ~ .navUl {
+  left: 0%;
+}
+#boxk:not(checked) ~ .navUl {
+  left: -105%;
+}
+
 /* *******************
 MAIN SECTION discover
 ***********************/
@@ -63,7 +89,7 @@ MAIN SECTION discover
   padding: 3rem 1rem;
 }
 #discover h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 #discover p {
   padding: 1rem 0;
@@ -83,6 +109,23 @@ MAIN SECTION about
 #aboutImg2 {
   width: 100%;
 }
+#aboutImg1 {
+  background-image: url(../img/image-about-dark.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+}
+#aboutImg2 {
+  background-image: url(../img/image-about-light.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+}
+
 #aboutTxt {
   padding: 3rem 1rem;
 }
@@ -95,28 +138,66 @@ MAIN SECTION about
   padding: 1rem 0;
   color: rgb(150, 150, 150);
 }
+
 /* *******************
 **********************
 RESPONSIVE DESKTOP
 ***********************
 ***********************/
-@media screen and (min-width:576px) {
-
- /* 
+@media screen and (min-width: 576px) {
+  /* 
 RESPONSIVE HEADER
 */
- 
-#burger i{
+
+  #burger i {
     display: none;
-}
-#burger .navUl{
+  }
+  #burger .navUl {
     display: flex;
-
-}
-#nelAb{
-    display: flex;
+    list-style: none;
+    width: 60%;
+  }
+  #burger .navUl li {
+    padding: 0 2rem;
+  }
+  .relAb {
     flex-direction: row-reverse;
-}
-
-/* FIN */
+    justify-content: start;
+  }
+  h1 {
+    width: 20%;
+    padding-left: 2rem;
+  }
+  /* 
+RESPONSIVE MAIN DISCOVER
+*/
+  #discover {
+    display: flex;
+  }
+  #discoverImg {
+    height: 70vh;
+    width: 67%;
+  }
+  #boutons {
+    padding-top: 0;
+    padding-top: 64vh;
+  }
+  #discoverTxt {
+    padding: 5rem 3rem;
+    width: 33%;
+  }
+  /* 
+RESPONSIVE MAIN ABOUT
+*/
+  #about {
+    display: flex;
+  }
+  #aboutTxt {
+    width: 100%;
+  }
+  #aboutImg1,
+  #aboutImg2 {
+    height: 30vh;
+  }
+  /* FIN */
 }
